@@ -1,0 +1,22 @@
+{
+  "name": "iykeflix",
+  "version": "1.0.0",
+  "description": "A videostreaming microservice application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "microoservices",
+    "video",
+    "streaming"
+  ],
+  "author": "Ikechukwu Mbakwem",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
