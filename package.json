@@ -4,7 +4,9 @@
   "description": "A videostreaming microservice application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build": "npm install --only=production && node index.js"
   },
   "keywords": [
     "microoservices",
@@ -14,6 +16,7 @@
   "author": "Ikechukwu Mbakwem",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.1",
     "express": "^4.18.1"
   },
   "devDependencies": {

@@ -1,15 +1,16 @@
 const express = require("express");
 const fs = require("fs");
+require("dotenv").config();
 
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT;
 
 app.get("/videos", (req, res) => {
   // Path to video file
-  const path = "./videos/video001.mp4";
+  const filePath = "./videos/video001.mp4";
 
   // Check if video file exists
-  fs.stat(path, (err, stats) => {
+  fs.stat(filePath, (err, stats) => {
     if (err) {
       console.log("Couldn't retrieve video file");
       res.sendStatus(500);
@@ -21,7 +22,7 @@ app.get("/videos", (req, res) => {
       "Content-Type": "video/mp4",
     });
 
-    fs.createReadStream(path).pipe(res);
+    fs.createReadStream(filePath).pipe(res);
   });
 });
 
